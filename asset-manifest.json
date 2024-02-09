@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/harshil-kakdiya/invoice.git/static/css/main.62d3213f.css",
-    "main.js": "/harshil-kakdiya/invoice.git/static/js/main.216f6b16.js",
-    "static/js/952.c0a3bc29.chunk.js": "/harshil-kakdiya/invoice.git/static/js/952.c0a3bc29.chunk.js",
-    "static/js/64.936b06cb.chunk.js": "/harshil-kakdiya/invoice.git/static/js/64.936b06cb.chunk.js",
-    "static/js/592.e0cb27e5.chunk.js": "/harshil-kakdiya/invoice.git/static/js/592.e0cb27e5.chunk.js",
-    "index.html": "/harshil-kakdiya/invoice.git/index.html",
-    "main.62d3213f.css.map": "/harshil-kakdiya/invoice.git/static/css/main.62d3213f.css.map",
-    "main.216f6b16.js.map": "/harshil-kakdiya/invoice.git/static/js/main.216f6b16.js.map",
-    "952.c0a3bc29.chunk.js.map": "/harshil-kakdiya/invoice.git/static/js/952.c0a3bc29.chunk.js.map",
-    "64.936b06cb.chunk.js.map": "/harshil-kakdiya/invoice.git/static/js/64.936b06cb.chunk.js.map",
-    "592.e0cb27e5.chunk.js.map": "/harshil-kakdiya/invoice.git/static/js/592.e0cb27e5.chunk.js.map"
+    "main.css": "/invoice/static/css/main.62d3213f.css",
+    "main.js": "/invoice/static/js/main.b9fb6526.js",
+    "static/js/952.c0a3bc29.chunk.js": "/invoice/static/js/952.c0a3bc29.chunk.js",
+    "static/js/64.936b06cb.chunk.js": "/invoice/static/js/64.936b06cb.chunk.js",
+    "static/js/592.e0cb27e5.chunk.js": "/invoice/static/js/592.e0cb27e5.chunk.js",
+    "index.html": "/invoice/index.html",
+    "main.62d3213f.css.map": "/invoice/static/css/main.62d3213f.css.map",
+    "main.b9fb6526.js.map": "/invoice/static/js/main.b9fb6526.js.map",
+    "952.c0a3bc29.chunk.js.map": "/invoice/static/js/952.c0a3bc29.chunk.js.map",
+    "64.936b06cb.chunk.js.map": "/invoice/static/js/64.936b06cb.chunk.js.map",
+    "592.e0cb27e5.chunk.js.map": "/invoice/static/js/592.e0cb27e5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.62d3213f.css",
-    "static/js/main.216f6b16.js"
+    "static/js/main.b9fb6526.js"
   ]
 }
