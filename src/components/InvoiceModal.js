@@ -47,26 +47,26 @@ class InvoiceModal extends React.Component {
                 <h5 className="fw-bold text-secondary"> {this.props.currency} {this.props.total}</h5>
               </div>
             </div>
-            <div className="p-4">
-              <Row className="mb-4">
-                <Col md={4}>
+            <div className="p-4" >
+              <Row className="mb-4 mt-0" style={{  border: '1px solid lightgray' }}>
+                <Col md={4} >
                   <div className="fw-bold">Billed to:</div>
                   <div>{this.props.info.billTo||''}</div>
                   <div>{this.props.info.billToAddress||''}</div>
                   <div>{this.props.info.billToEmail||''}</div>
                 </Col>
-                <Col md={4}>
+                <Col md={4} style={{ borderLeft: '1px solid lightgray', borderRight: '1px solid lightgray' }}>
                   <div className="fw-bold">Billed From:</div>
                   <div>{this.props.info.billFrom||''}</div>
                   <div>{this.props.info.billFromAddress||''}</div>
                   <div>{this.props.info.billFromEmail||''}</div>
                 </Col>
                 <Col md={4}>
-                  <div className="fw-bold mt-2">Date Of Issue:</div>
+                  <div className="fw-bold">Date Of Issue:</div>
                   <div>{this.props.info.dateOfIssue||''}</div>
                 </Col>
               </Row>
-              <Table className="mb-0">
+              <Table className="mb-4" border={'1px solid gray'}>
                 <thead>
                   <tr>
                     <th>QTY</th>
@@ -92,7 +92,7 @@ class InvoiceModal extends React.Component {
                   })}
                 </tbody>
               </Table>
-              <Table>
+              <Table border={'1px solid gray'}>
                 <tbody>
                   <tr>
                     <td>&nbsp;</td>
@@ -100,27 +100,31 @@ class InvoiceModal extends React.Component {
                     <td>&nbsp;</td>
                   </tr>
                   <tr className="text-end">
+                    
+                    <td className="fw-bold text-start" style={{width: '100px'}}>SUBTOTAL</td>
                     <td></td>
-                    <td className="fw-bold" style={{width: '100px'}}>SUBTOTAL</td>
                     <td className="text-end" style={{width: '100px'}}>{this.props.currency} {this.props.subTotal}</td>
                   </tr>
                   {this.props.taxAmmount != 0.00 &&
                     <tr className="text-end">
+                      
+                      <td className="fw-bold  text-start" style={{width: '100px'}}>TAX</td>
                       <td></td>
-                      <td className="fw-bold" style={{width: '100px'}}>TAX</td>
                       <td className="text-end" style={{width: '100px'}}>{this.props.currency} {this.props.taxAmmount}</td>
                     </tr>
                   }
                   {this.props.discountAmmount != 0.00 &&
                     <tr className="text-end">
+                      
+                      <td className="fw-bold text-start" style={{width: '100px'}}>DISCOUNT</td>
                       <td></td>
-                      <td className="fw-bold" style={{width: '100px'}}>DISCOUNT</td>
-                      <td className="text-end" style={{width: '100px'}}>{this.props.currency} {this.props.discountAmmount}</td>
+                      <td className="text-end" style={{width: '100px'}}>- {this.props.currency} {this.props.discountAmmount}</td>
                     </tr>
                   }
                   <tr className="text-end">
+                    
+                    <td className="fw-bold text-start" style={{width: '100px'}}>TOTAL</td>
                     <td></td>
-                    <td className="fw-bold" style={{width: '100px'}}>TOTAL</td>
                     <td className="text-end" style={{width: '100px'}}>{this.props.currency} {this.props.total}</td>
                   </tr>
                 </tbody>
