@@ -64,12 +64,15 @@ class InvoiceForm extends React.Component {
     this.setState(this.state.items);
   }
   handleCalculateTotal() {
-    var items = this.state.items;
+    var itemList = this.state.items;
     var subTotal = 0;
 
-    items.map(function(items) {
-      subTotal = parseFloat(subTotal + (parseFloat(items.price).toFixed(2) * parseInt(items.quantity))).toFixed(2)
-    });
+    itemList.map(
+      (itemDetail) =>
+        (subTotal +=
+          parseFloat(itemDetail.price).toFixed(2) *
+          parseInt(itemDetail.quantity))
+    );
 
     this.setState({
       subTotal: parseFloat(subTotal).toFixed(2)
@@ -88,6 +91,7 @@ class InvoiceForm extends React.Component {
     });
 
   };
+  
   onItemizedItemEdit(evt) {
     var item = {
       id: evt.target.id,
@@ -204,7 +208,7 @@ class InvoiceForm extends React.Component {
           </Card>
         </Col>
         <Col md={4} lg={3}>
-          <div className="sticky-top mt-4 pt-xl-4 shadow-sm p-4 bg-white">
+          <div className="sticky-top mt-4 pt-xl-4 shadow-sm p-4">
             <Button variant="primary" type="submit" className="d-block w-100">Review Invoice</Button>
             <InvoiceModal showModal={this.state.isOpen} closeModal={this.closeModal} info={this.state} items={this.state.items} currency={this.state.currency} subTotal={this.state.subTotal} taxAmmount={this.state.taxAmmount} discountAmmount={this.state.discountAmmount} total={this.state.total}/>
             <Form.Group className="mb-3">
