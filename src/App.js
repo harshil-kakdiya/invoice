@@ -7,7 +7,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App d-flex flex-column align-items-center justify-content-center w-100 h-full" style={{background:"#f2f2f2"}}>
+    <div className="App d-flex flex-column align-items-center justify-content-center w-100 h-full" >
     <Container>
       <InvoiceForm/>
     </Container>

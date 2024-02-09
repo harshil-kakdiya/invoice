@@ -165,7 +165,7 @@ class InvoiceForm extends React.Component {
             </Row>
             <InvoiceItem onItemizedItemEdit={this.onItemizedItemEdit.bind(this)} onRowAdd={this.handleAddEvent.bind(this)} onRowDel={this.handleRowDel.bind(this)} currency={this.state.currency} items={this.state.items}/>
             <Row className="mt-4 justify-content-end">
-              <Col lg={6}>
+              <Col lg={12}>
                 <div className="d-flex flex-row align-items-start justify-content-between">
                   <span className="fw-bold">Subtotal:
                   </span>
@@ -175,7 +175,7 @@ class InvoiceForm extends React.Component {
                 <div className="d-flex flex-row align-items-start justify-content-between mt-2">
                   <span className="fw-bold">Discount:</span>
                   <span>
-                    <span className="small ">({this.state.discountRate || 0}%)</span>
+                    <span className="small ">({this.state.discountRate || 0}%) - </span>
                     {this.state.currency}
                     {this.state.discountAmmount || 0}</span>
                 </div>
@@ -183,7 +183,7 @@ class InvoiceForm extends React.Component {
                   <span className="fw-bold">Tax:
                   </span>
                   <span>
-                    <span className="small ">({this.state.taxRate || 0}%)</span>
+                    <span className="small ">({this.state.taxRate || 0}%) </span>
                     {this.state.currency}
                     {this.state.taxAmmount || 0}</span>
                 </div>
@@ -204,7 +204,7 @@ class InvoiceForm extends React.Component {
           </Card>
         </Col>
         <Col md={4} lg={3}>
-          <div className="sticky-top pt-md-3 pt-xl-4">
+          <div className="sticky-top mt-4 pt-xl-4 shadow-sm p-4 bg-white">
             <Button variant="primary" type="submit" className="d-block w-100">Review Invoice</Button>
             <InvoiceModal showModal={this.state.isOpen} closeModal={this.closeModal} info={this.state} items={this.state.items} currency={this.state.currency} subTotal={this.state.subTotal} taxAmmount={this.state.taxAmmount} discountAmmount={this.state.discountAmmount} total={this.state.total}/>
             <Form.Group className="mb-3">
